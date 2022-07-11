@@ -18,15 +18,15 @@ public class ConsultaTemas extends Conexion {
     ResultSet rs;
     
     
-    public boolean MostrarTemas(Tema tema) {
+    public boolean MostrarTemas(Tema tema[]) {
         Connection conexion = getConnection();
 
         try {
             conexion = getConnection();
             int con = 0;
-            //int sumador = 0;
+            int sumador = 0;
             ps = conexion.prepareStatement("select tem.nombreTema from tema tem inner join asignatura asi on asi.nombre = tem.nombre_asignatura where asi.nombre = ?;");
-            ps.setString(1,tema.getNombre_asignatura());
+            ps.setString(1,tema[0].getNombre_asignatura());
             rs = ps.executeQuery();
             
             while(rs.next()){                
@@ -35,12 +35,12 @@ public class ConsultaTemas extends Conexion {
                 empleado.setNombre(rs.getString("nombre"));
                 empleado.setPuesto(rs.getString("puesto"));
                 empleado.setDireccion(rs.getString("direccion"));*/
-                tema.setNombreTema(rs.getString("nombreTema"));
+                tema[sumador].setNombreTema(rs.getString("nombreTema"));
                 
                 System.out.println(rs.getString("nombreTema"));
                 
                 con = 1;
-                //sumador++;
+                sumador++;
             }
             if (con == 1){
                 return true;

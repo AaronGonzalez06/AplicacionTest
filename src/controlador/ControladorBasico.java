@@ -23,7 +23,9 @@ public class ControladorBasico implements ActionListener {
     private Inicio ventanaInicio;
     private Temas ventanaTemas;
     private Tema tema = new Tema();
-    private ConsultaTemas modeloConsultasTemas = new ConsultaTemas();       
+    private ConsultaTemas modeloConsultasTemas = new ConsultaTemas();    
+    
+    private Tema[] temas = new Tema[2];        
 
     public ControladorBasico(Inicio ventanaInicio, Temas ventanaTemas) {
         this.ventanaInicio = ventanaInicio;
@@ -58,8 +60,12 @@ public class ControladorBasico implements ActionListener {
         
         
         } else if (e.getSource() == ventanaTemas.BProgramacion){
+            
+            temas[0] = new Tema();
+            temas[1] = new Tema();
+            
             tema.setNombre_asignatura(ventanaTemas.BProgramacion.getText());
-           if(modeloConsultasTemas.MostrarTemas(tema)){
+           if(modeloConsultasTemas.MostrarTemas(temas)){
             /*vista.Nombre.setText(empleado.getNombre());
             vista.direccion.setText(empleado.getDireccion());
             vista.puesto.setText(empleado.getPuesto());
@@ -67,15 +73,18 @@ public class ControladorBasico implements ActionListener {
             vista.telefono.setText(String.valueOf(empleado.getTelefono()));*/
             //JOptionPane.showMessageDialog(null, "hay datos");  
             DefaultListModel deflist= new DefaultListModel();
-            deflist.addElement(tema.getNombreTema());
+            for(int x = 0 ; x < 2; x++){
+            deflist.addElement(temas[x].getNombreTema());   
+            System.out.println(temas[x].getNombreTema());  
+            }
             ventanaTemas.ListaTemas.setModel(deflist);            
-            System.out.println(tema.getNombreTema());
+                      
             } else {
             JOptionPane.showMessageDialog(null, "No hay tema de esta asignatura");            
             }
         } else if (e.getSource() == ventanaTemas.BSistemas){
             tema.setNombre_asignatura("Sistemas informaticos");
-           if(modeloConsultasTemas.MostrarTemas(tema)){
+           if(modeloConsultasTemas.MostrarTemas(temas)){
             DefaultListModel deflist= new DefaultListModel();
             deflist.addElement(tema.getNombreTema());
             ventanaTemas.ListaTemas.setModel(deflist);            
