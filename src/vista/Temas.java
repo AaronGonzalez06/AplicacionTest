@@ -47,14 +47,15 @@ public class Temas extends javax.swing.JFrame {
 
         BSistemas.setText("Sistemas");
 
-        BBDatos.setText("Bases de datos");
+        BBDatos.setText("Base de datos");
 
-        BEntorno.setText("Entornos de desarrollo");
+        BEntorno.setText("Entorno de desarrollo");
 
-        BLenguaje.setText("Lenguaje d marcas");
+        BLenguaje.setText("Lenguaje de marcas");
 
         BVolver.setText("Menú principal");
 
+        ListaTemas.setBorder(new javax.swing.border.MatteBorder(null));
         ListaTemas.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -74,30 +75,29 @@ public class Temas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BProgramacion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(BSistemas)
-                        .addGap(18, 18, 18)
-                        .addComponent(BBDatos)
-                        .addGap(4, 4, 4)))
-                .addGap(0, 67, Short.MAX_VALUE)
-                .addComponent(BEntorno)
-                .addGap(18, 18, 18)
-                .addComponent(BLenguaje)
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(BVolver)
                 .addGap(23, 23, 23))
             .addGroup(layout.createSequentialGroup()
-                .addGap(177, 177, 177)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(BProgramacion)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BSistemas)
+                                .addGap(18, 18, 18)
+                                .addComponent(BBDatos)
+                                .addGap(4, 4, 4)))
+                        .addGap(18, 18, 18)
+                        .addComponent(BEntorno)
+                        .addGap(18, 18, 18)
+                        .addComponent(BLenguaje)))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,9 +111,9 @@ public class Temas extends javax.swing.JFrame {
                     .addComponent(BEntorno)
                     .addComponent(BSistemas)
                     .addComponent(BLenguaje))
-                .addGap(42, 42, 42)
+                .addGap(46, 46, 46)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(BVolver)
                 .addGap(31, 31, 31))
         );

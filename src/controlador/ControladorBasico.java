@@ -22,19 +22,27 @@ public class ControladorBasico implements ActionListener {
     
     private Inicio ventanaInicio;
     private Temas ventanaTemas;
-    private Tema tema = new Tema();
+    //private Tema tema = new Tema();
     private ConsultaTemas modeloConsultasTemas = new ConsultaTemas();    
     
-    private Tema[] temas = new Tema[2];        
+    private Tema temas[] = new Tema[2];        
 
     public ControladorBasico(Inicio ventanaInicio, Temas ventanaTemas) {
         this.ventanaInicio = ventanaInicio;
         this.ventanaTemas = ventanaTemas;
         
+        //vistaInicio
         ventanaInicio.BTemas.addActionListener(this);
+        
+        //vistaTemas
         ventanaTemas.BVolver.addActionListener(this);
         ventanaTemas.BProgramacion.addActionListener(this);
         ventanaTemas.BSistemas.addActionListener(this);
+        ventanaTemas.BLenguaje.addActionListener(this);
+        ventanaTemas.BBDatos.addActionListener(this);
+        ventanaTemas.BEntorno.addActionListener(this);
+        
+        
     }
     
     public void iniciar(){
@@ -48,6 +56,11 @@ public class ControladorBasico implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         
+        temas[0] = new Tema();
+        temas[1] = new Tema();
+        DefaultListModel deflist= new DefaultListModel();
+        int sumador = 1;
+        
         if(e.getSource() == ventanaInicio.BTemas){
             System.out.println("aaaaa");
             ventanaInicio.setVisible(false);
@@ -59,23 +72,15 @@ public class ControladorBasico implements ActionListener {
             ventanaTemas.setVisible(false);
         
         
-        } else if (e.getSource() == ventanaTemas.BProgramacion){
+        } else if (e.getSource() == ventanaTemas.BProgramacion){                                    
+            temas[0].setNombre_asignatura(ventanaTemas.BProgramacion.getText());
+            temas[1].setNombre_asignatura(ventanaTemas.BProgramacion.getText());
+           if(modeloConsultasTemas.MostrarTemas(temas)){             
             
-            temas[0] = new Tema();
-            temas[1] = new Tema();
-            
-            tema.setNombre_asignatura(ventanaTemas.BProgramacion.getText());
-           if(modeloConsultasTemas.MostrarTemas(temas)){
-            /*vista.Nombre.setText(empleado.getNombre());
-            vista.direccion.setText(empleado.getDireccion());
-            vista.puesto.setText(empleado.getPuesto());
-            vista.codigo.setText(String.valueOf(empleado.getCodigo()));
-            vista.telefono.setText(String.valueOf(empleado.getTelefono()));*/
-            //JOptionPane.showMessageDialog(null, "hay datos");  
-            DefaultListModel deflist= new DefaultListModel();
             for(int x = 0 ; x < 2; x++){
-            deflist.addElement(temas[x].getNombreTema());   
-            System.out.println(temas[x].getNombreTema());  
+            deflist.addElement("Tema " +sumador +": " + temas[x].getNombreTema());   
+            //System.out.println(temas[x].getNombreTema());  
+            sumador++;
             }
             ventanaTemas.ListaTemas.setModel(deflist);            
                       
@@ -83,12 +88,58 @@ public class ControladorBasico implements ActionListener {
             JOptionPane.showMessageDialog(null, "No hay tema de esta asignatura");            
             }
         } else if (e.getSource() == ventanaTemas.BSistemas){
-            tema.setNombre_asignatura("Sistemas informaticos");
+            //tema.setNombre_asignatura("Sistemas informaticos");
+            temas[0].setNombre_asignatura("Sistemas informaticos");
+            temas[1].setNombre_asignatura("Sistemas informaticos");
            if(modeloConsultasTemas.MostrarTemas(temas)){
-            DefaultListModel deflist= new DefaultListModel();
-            deflist.addElement(tema.getNombreTema());
-            ventanaTemas.ListaTemas.setModel(deflist);            
-            System.out.println(tema.getNombreTema());
+            for(int x = 0 ; x < 2; x++){
+            deflist.addElement("Tema " +sumador +": " + temas[x].getNombreTema());   
+            //System.out.println(temas[x].getNombreTema());  
+            sumador++;
+            }
+            ventanaTemas.ListaTemas.setModel(deflist);
+            } else {
+            JOptionPane.showMessageDialog(null, "No hay tema de esta asignatura");            
+            }
+        } else if (e.getSource() == ventanaTemas.BLenguaje){
+            //tema.setNombre_asignatura("Sistemas informaticos");
+            temas[0].setNombre_asignatura(ventanaTemas.BLenguaje.getText());
+            temas[1].setNombre_asignatura(ventanaTemas.BLenguaje.getText());
+           if(modeloConsultasTemas.MostrarTemas(temas)){
+            for(int x = 0 ; x < 2; x++){
+            deflist.addElement("Tema " +sumador +": " + temas[x].getNombreTema());   
+            //System.out.println(temas[x].getNombreTema());  
+            sumador++;
+            }
+            ventanaTemas.ListaTemas.setModel(deflist);
+            } else {
+            JOptionPane.showMessageDialog(null, "No hay tema de esta asignatura");            
+            }
+        } else if (e.getSource() == ventanaTemas.BBDatos){
+            //tema.setNombre_asignatura("Sistemas informaticos");
+            temas[0].setNombre_asignatura(ventanaTemas.BBDatos.getText());
+            temas[1].setNombre_asignatura(ventanaTemas.BBDatos.getText());
+           if(modeloConsultasTemas.MostrarTemas(temas)){
+            for(int x = 0 ; x < 2; x++){
+            deflist.addElement("Tema " +sumador +": " + temas[x].getNombreTema());   
+            //System.out.println(temas[x].getNombreTema());  
+            sumador++;
+            }
+            ventanaTemas.ListaTemas.setModel(deflist);
+            } else {
+            JOptionPane.showMessageDialog(null, "No hay tema de esta asignatura");            
+            }
+        } else if (e.getSource() == ventanaTemas.BEntorno){
+            //tema.setNombre_asignatura("Sistemas informaticos");
+            temas[0].setNombre_asignatura("entrono de desarrollo");
+            temas[1].setNombre_asignatura("entrono de desarrollo");
+           if(modeloConsultasTemas.MostrarTemas(temas)){
+            for(int x = 0 ; x < 2; x++){
+            deflist.addElement("Tema " +sumador +": " + temas[x].getNombreTema());   
+            //System.out.println(temas[x].getNombreTema());  
+            sumador++;
+            }
+            ventanaTemas.ListaTemas.setModel(deflist);
             } else {
             JOptionPane.showMessageDialog(null, "No hay tema de esta asignatura");            
             }
