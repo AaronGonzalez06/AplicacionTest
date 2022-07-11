@@ -29,14 +29,16 @@ public class ConsultaTemas extends Conexion {
             ps.setString(1,tema.getNombre_asignatura());
             rs = ps.executeQuery();
             
-            while(rs.next()){
-                System.out.println("OK bien");
+            while(rs.next()){                
                 /*empleado.setCodigo(rs.getInt("codigo"));
                 empleado.setTelefono(rs.getInt("telefono"));
                 empleado.setNombre(rs.getString("nombre"));
                 empleado.setPuesto(rs.getString("puesto"));
                 empleado.setDireccion(rs.getString("direccion"));*/
                 tema.setNombreTema(rs.getString("nombreTema"));
+                
+                System.out.println(rs.getString("nombreTema"));
+                
                 con = 1;
                 //sumador++;
             }

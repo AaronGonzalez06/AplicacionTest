@@ -32,6 +32,7 @@ public class ControladorBasico implements ActionListener {
         ventanaInicio.BTemas.addActionListener(this);
         ventanaTemas.BVolver.addActionListener(this);
         ventanaTemas.BProgramacion.addActionListener(this);
+        ventanaTemas.BSistemas.addActionListener(this);
     }
     
     public void iniciar(){
@@ -65,6 +66,16 @@ public class ControladorBasico implements ActionListener {
             vista.codigo.setText(String.valueOf(empleado.getCodigo()));
             vista.telefono.setText(String.valueOf(empleado.getTelefono()));*/
             //JOptionPane.showMessageDialog(null, "hay datos");  
+            DefaultListModel deflist= new DefaultListModel();
+            deflist.addElement(tema.getNombreTema());
+            ventanaTemas.ListaTemas.setModel(deflist);            
+            System.out.println(tema.getNombreTema());
+            } else {
+            JOptionPane.showMessageDialog(null, "No hay tema de esta asignatura");            
+            }
+        } else if (e.getSource() == ventanaTemas.BSistemas){
+            tema.setNombre_asignatura("Sistemas informaticos");
+           if(modeloConsultasTemas.MostrarTemas(tema)){
             DefaultListModel deflist= new DefaultListModel();
             deflist.addElement(tema.getNombreTema());
             ventanaTemas.ListaTemas.setModel(deflist);            
