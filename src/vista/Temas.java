@@ -35,6 +35,9 @@ public class Temas extends javax.swing.JFrame {
         BVolver = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         ListaTemas = new javax.swing.JList<>();
+        BPregunta = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaRespuesta = new javax.swing.JTable();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -63,6 +66,18 @@ public class Temas extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(ListaTemas);
 
+        BPregunta.setText("Mostrar preguntas");
+
+        tablaRespuesta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Pregunta", "Respuesta 1", "Respuesta 2", "Respuesta 3","Respuesta 4","Respuesta correcta"
+            }
+        ));
+        jScrollPane1.setViewportView(tablaRespuesta);
+
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
 
@@ -75,14 +90,9 @@ public class Temas extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BVolver)
-                .addGap(23, 23, 23))
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
+                .addGap(85, 85, 85)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
@@ -96,8 +106,20 @@ public class Temas extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(BEntorno)
                         .addGap(18, 18, 18)
-                        .addComponent(BLenguaje)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                        .addComponent(BLenguaje)
+                        .addContainerGap(304, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(BVolver))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(BPregunta))
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1)))
+                        .addGap(23, 23, 23))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,11 +133,18 @@ public class Temas extends javax.swing.JFrame {
                     .addComponent(BEntorno)
                     .addComponent(BSistemas)
                     .addComponent(BLenguaje))
-                .addGap(46, 46, 46)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(BVolver)
-                .addGap(31, 31, 31))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(BPregunta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BVolver)
+                        .addGap(31, 31, 31))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(143, Short.MAX_VALUE))))
         );
 
         pack();
@@ -160,6 +189,7 @@ public class Temas extends javax.swing.JFrame {
     public javax.swing.JButton BBDatos;
     public javax.swing.JButton BEntorno;
     public javax.swing.JButton BLenguaje;
+    public javax.swing.JButton BPregunta;
     public javax.swing.JButton BProgramacion;
     public javax.swing.JButton BSistemas;
     public javax.swing.JButton BVolver;
@@ -168,6 +198,8 @@ public class Temas extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JTable tablaRespuesta;
     // End of variables declaration//GEN-END:variables
 }
