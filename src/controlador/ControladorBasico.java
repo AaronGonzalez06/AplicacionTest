@@ -187,7 +187,7 @@ public class ControladorBasico implements ActionListener {
 
                         for (int y = 0; y < respuestas.length; y++) {
                             modelo.addRow(new Object[]{respuestas[y].getPregunta(), respuestas[y].getRespuesta_uno(),
-                                respuestas[y].getRespuesta_dos(), respuestas[y].getRespuesta_tres(), respuestas[y].getRespuesta_cuatro(),respuestas[y].getRespuesta_correcta()});
+                                respuestas[y].getRespuesta_dos(), respuestas[y].getRespuesta_tres(), respuestas[y].getRespuesta_cuatro()});
                         }
 
                         for (int i = 0; i < ventanaTemas.tablaRespuesta.getRowCount(); i++) {
@@ -209,11 +209,19 @@ public class ControladorBasico implements ActionListener {
                 }
             }
         } else if (e.getSource() == ventanaTemas.BCorrecto) {
-            int fila = ventanaTemas.tablaRespuesta.getSelectedRow();
-            int NRespuesta = (int) ventanaTemas.tablaRespuesta.getValueAt(fila, 5);
-            String respuesCorrecta = (String) ventanaTemas.tablaRespuesta.getValueAt(fila, NRespuesta);
+            int seleccion = ventanaTemas.tablaRespuesta.getSelectedColumn();
+            if (seleccion > -1) {
+                int fila = ventanaTemas.tablaRespuesta.getSelectedRow();
+                String tema = ventanaTemas.ListaTemas.getSelectedValue().substring(8);
+                String pregunta = (String) ventanaTemas.tablaRespuesta.getValueAt(fila, 0);
+                modeloConsultasRespuesta.numeroRespuesta(tema, pregunta);
+                String respuesCorrecta = (String) ventanaTemas.tablaRespuesta.getValueAt(fila, modeloConsultasRespuesta.numeroRespuesta(tema, pregunta));
+                JOptionPane.showMessageDialog(null, "La respuesta correcta es: " + respuesCorrecta);
 
-            JOptionPane.showMessageDialog(null, "La respuesta correcta es: " + respuesCorrecta);
+            } else {
+                JOptionPane.showMessageDialog(null, "Seleccione la pregunta para saber la respuesta.");
+            }
+
         }
 
     }

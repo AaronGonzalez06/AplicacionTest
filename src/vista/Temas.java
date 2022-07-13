@@ -74,7 +74,7 @@ public class Temas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Pregunta", "Respuesta 1", "Respuesta 2", "Respuesta 3","Respuesta 4","Respuesta correcta"
+                "Pregunta", "Respuesta 1", "Respuesta 2", "Respuesta 3","Respuesta 4"
             }
         ));
         jScrollPane1.setViewportView(tablaRespuesta);

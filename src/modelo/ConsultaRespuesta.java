@@ -101,4 +101,41 @@ public class ConsultaRespuesta extends Conexion {
         }
     }
     
+    public int numeroRespuesta(String tema , String pregunta) {
+        Connection conexion = getConnection();
+
+        try {
+            conexion = getConnection();
+            int con = 0;
+            int resultado = 0;
+            ps = conexion.prepareStatement("select respuesta_correcta from tema tem "
+                    + "inner join respuesta res on res.id_nombreTema = tem.nombreTema "
+                    + "inner join pregunta pre on pre.id_pregunta = res.id_pregunta "
+                    + "where tem.nombreTema = ? and pre.pregunta = ?;");
+            ps.setString(1,tema);
+            ps.setString(2,pregunta);
+            rs = ps.executeQuery();
+            
+            if (rs.next()){
+                resultado = rs.getInt("respuesta_correcta");
+                return resultado;
+            }else{
+                return 0;                
+            }
+                
+            
+            
+
+        } catch (Exception ex) {
+            System.out.println("error desde el modelo: " + ex);
+            return 0;
+        } finally {
+            try {
+                conexion.close();
+            } catch (Exception ex) {
+                System.out.println("error desde el modelo: " + ex);
+            }
+        }
+    }
+    
 }
