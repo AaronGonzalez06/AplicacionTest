@@ -50,6 +50,7 @@ public class ControladorBasico implements ActionListener {
         ventanaTemas.BBDatos.addActionListener(this);
         ventanaTemas.BEntorno.addActionListener(this);
         ventanaTemas.BPregunta.addActionListener(this);
+        ventanaTemas.BCorrecto.addActionListener(this);
 
     }
 
@@ -186,23 +187,15 @@ public class ControladorBasico implements ActionListener {
 
                         for (int y = 0; y < respuestas.length; y++) {
                             modelo.addRow(new Object[]{respuestas[y].getPregunta(), respuestas[y].getRespuesta_uno(),
-                                respuestas[y].getRespuesta_dos(), respuestas[y].getRespuesta_tres(), respuestas[y].getRespuesta_cuatro(), respuestas[y].getRespuesta_correcta()});
-
-                            if (respuestas[y].getRespuesta_correcta() == 2) {
-
-                            }
-                            //int rowIndex = ventanaTemas.tablaRespuesta.getSelectedRow();
-                            //int colIndex = ventanaTemas.tablaRespuesta.getSelectedColumn();
-                            //System.out.println(rowIndex + " : "+ colIndex);
-
+                                respuestas[y].getRespuesta_dos(), respuestas[y].getRespuesta_tres(), respuestas[y].getRespuesta_cuatro(),respuestas[y].getRespuesta_correcta()});
                         }
 
                         for (int i = 0; i < ventanaTemas.tablaRespuesta.getRowCount(); i++) {
                             System.out.println("Pregunta: " + i);
                             System.out.println("Pregunta: " + ventanaTemas.tablaRespuesta.getValueAt(i, 0));
                             System.out.println("respuesta 2: " + ventanaTemas.tablaRespuesta.getValueAt(i, 1));
-                            System.out.println("respuesta 3: " + ventanaTemas.tablaRespuesta.getValueAt(i, 2));                            
-                            System.out.println("respuesta 4: " + ventanaTemas.tablaRespuesta.getValueAt(i, 3));                            
+                            System.out.println("respuesta 3: " + ventanaTemas.tablaRespuesta.getValueAt(i, 2));
+                            System.out.println("respuesta 4: " + ventanaTemas.tablaRespuesta.getValueAt(i, 3));
                             System.out.println("correcta: " + ventanaTemas.tablaRespuesta.getValueAt(i, 4));
                         }
                         //ventanaTemas.tablaRespuesta;
@@ -215,6 +208,12 @@ public class ControladorBasico implements ActionListener {
                     JOptionPane.showMessageDialog(null, "No hay preguntas del tema");
                 }
             }
+        } else if (e.getSource() == ventanaTemas.BCorrecto) {
+            int fila = ventanaTemas.tablaRespuesta.getSelectedRow();
+            int NRespuesta = (int) ventanaTemas.tablaRespuesta.getValueAt(fila, 5);
+            String respuesCorrecta = (String) ventanaTemas.tablaRespuesta.getValueAt(fila, NRespuesta);
+
+            JOptionPane.showMessageDialog(null, "La respuesta correcta es: " + respuesCorrecta);
         }
 
     }

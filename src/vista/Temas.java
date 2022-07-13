@@ -38,6 +38,7 @@ public class Temas extends javax.swing.JFrame {
         BPregunta = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaRespuesta = new javax.swing.JTable();
+        BCorrecto = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -78,6 +79,8 @@ public class Temas extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tablaRespuesta);
 
+        BCorrecto.setText("Pregunta correcta");
+
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
 
@@ -116,7 +119,8 @@ public class Temas extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 291, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(BPregunta))
+                                    .addComponent(BPregunta)
+                                    .addComponent(BCorrecto))
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane1)))
                         .addGap(23, 23, 23))))
@@ -139,6 +143,8 @@ public class Temas extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(BPregunta)
+                        .addGap(18, 18, 18)
+                        .addComponent(BCorrecto)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BVolver)
                         .addGap(31, 31, 31))
@@ -187,6 +193,7 @@ public class Temas extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BBDatos;
+    public javax.swing.JButton BCorrecto;
     public javax.swing.JButton BEntorno;
     public javax.swing.JButton BLenguaje;
     public javax.swing.JButton BPregunta;
