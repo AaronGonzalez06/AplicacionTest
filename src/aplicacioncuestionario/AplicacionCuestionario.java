@@ -5,8 +5,10 @@
 package aplicacioncuestionario;
 
 import controlador.ControladorBasico;
+import controlador.ControladorCrearPregunta;
 import vista.Inicio;
 import vista.Temas;
+import vista.CrearPregunta;
 
 /**
  *
@@ -21,9 +23,10 @@ public class AplicacionCuestionario {
         // TODO code application logic here
         Inicio VistaInicio = new Inicio();
         Temas VistaTemas = new Temas();
+        CrearPregunta VistaPregunta = new CrearPregunta();
         
         ControladorBasico Basico = new ControladorBasico(VistaInicio,VistaTemas);
-        
+        ControladorCrearPregunta crearPregunta =  new ControladorCrearPregunta(VistaInicio,VistaPregunta);
         Basico.iniciar();
         VistaInicio.setVisible(true);
     }

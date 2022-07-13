@@ -71,7 +71,7 @@ public class ControladorBasico implements ActionListener {
         int sumador = 1;
 
         if (e.getSource() == ventanaInicio.BTemas) {
-            System.out.println("aaaaa");
+            
             ventanaInicio.setVisible(false);
             ventanaTemas.setVisible(true);
 
