@@ -19,6 +19,7 @@ import modelo.Respuesta;
 import modelo.Tema;
 import vista.Inicio;
 import vista.Temas;
+import vista.PreCuestionario;
 
 /**
  *
@@ -28,6 +29,7 @@ public class ControladorBasico implements ActionListener {
 
     private Inicio ventanaInicio;
     private Temas ventanaTemas;
+    private PreCuestionario ventanaPreCuestionario;
     //private Tema tema = new Tema();
     private ConsultaTemas modeloConsultasTemas = new ConsultaTemas();
     private ConsultaRespuesta modeloConsultasRespuesta = new ConsultaRespuesta();
@@ -35,12 +37,14 @@ public class ControladorBasico implements ActionListener {
     private Tema temas[] = new Tema[2];
     //private Respuesta respuestas[] = new Respuesta[2];
 
-    public ControladorBasico(Inicio ventanaInicio, Temas ventanaTemas) {
+    public ControladorBasico(Inicio ventanaInicio, Temas ventanaTemas ,PreCuestionario ventanaPreCuestionario) {
         this.ventanaInicio = ventanaInicio;
         this.ventanaTemas = ventanaTemas;
+        this.ventanaPreCuestionario = ventanaPreCuestionario;
 
         //vistaInicio
         ventanaInicio.BTemas.addActionListener(this);
+        ventanaInicio.BCuestionario.addActionListener(this);
 
         //vistaTemas
         ventanaTemas.BVolver.addActionListener(this);
@@ -58,6 +62,7 @@ public class ControladorBasico implements ActionListener {
         ventanaInicio.setTitle("Aplicación cuestionarios.");
         ventanaInicio.setLocationRelativeTo(null);
         ventanaTemas.setLocationRelativeTo(null);
+        ventanaPreCuestionario.setLocationRelativeTo(null);
         ventanaTemas.ListaTemas.setVisible(false);
         ventanaTemas.BPregunta.setVisible(false);
     }
@@ -75,7 +80,12 @@ public class ControladorBasico implements ActionListener {
             ventanaInicio.setVisible(false);
             ventanaTemas.setVisible(true);
 
-        } else if (e.getSource() == ventanaTemas.BVolver) {
+        } else if (e.getSource() == ventanaInicio.BCuestionario) {
+            
+            ventanaInicio.setVisible(false);
+            ventanaPreCuestionario.setVisible(true);
+
+        }  else if (e.getSource() == ventanaTemas.BVolver) {
             ventanaInicio.setVisible(true);
             ventanaTemas.setVisible(false);
 
