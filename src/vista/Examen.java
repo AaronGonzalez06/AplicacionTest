@@ -26,34 +26,416 @@ public class Examen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tema = new javax.swing.JLabel();
+        pregunta1 = new javax.swing.ButtonGroup();
+        pregunta2 = new javax.swing.ButtonGroup();
+        pregunta3 = new javax.swing.ButtonGroup();
+        pregunta4 = new javax.swing.ButtonGroup();
+        pregunta5 = new javax.swing.ButtonGroup();
+        pregunta6 = new javax.swing.ButtonGroup();
+        pregunta7 = new javax.swing.ButtonGroup();
+        pregunta8 = new javax.swing.ButtonGroup();
+        pregunta9 = new javax.swing.ButtonGroup();
+        pregunta10 = new javax.swing.ButtonGroup();
         asignatura = new javax.swing.JLabel();
+        tema = new javax.swing.JLabel();
+        acabarTest = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        unoa = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
+        unob = new javax.swing.JRadioButton();
+        unoc = new javax.swing.JRadioButton();
+        unod = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
+        dosa = new javax.swing.JRadioButton();
+        dosb = new javax.swing.JRadioButton();
+        dosc = new javax.swing.JRadioButton();
+        dosd = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        tresa = new javax.swing.JRadioButton();
+        tresb = new javax.swing.JRadioButton();
+        tresc = new javax.swing.JRadioButton();
+        tresd = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        cuatroa = new javax.swing.JRadioButton();
+        cuatrob = new javax.swing.JRadioButton();
+        cuatroc = new javax.swing.JRadioButton();
+        cuatrod = new javax.swing.JRadioButton();
+        cincod = new javax.swing.JRadioButton();
+        cincoc = new javax.swing.JRadioButton();
+        cincob = new javax.swing.JRadioButton();
+        cincoa = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        seisa = new javax.swing.JRadioButton();
+        seisb = new javax.swing.JRadioButton();
+        seisc = new javax.swing.JRadioButton();
+        seisd = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
+        sietea = new javax.swing.JRadioButton();
+        sieteb = new javax.swing.JRadioButton();
+        sietec = new javax.swing.JRadioButton();
+        sieted = new javax.swing.JRadioButton();
+        jLabel8 = new javax.swing.JLabel();
+        ochoa = new javax.swing.JRadioButton();
+        ochob = new javax.swing.JRadioButton();
+        ochoc = new javax.swing.JRadioButton();
+        ochod = new javax.swing.JRadioButton();
+        jLabel9 = new javax.swing.JLabel();
+        nuevea = new javax.swing.JRadioButton();
+        nueveb = new javax.swing.JRadioButton();
+        nuevec = new javax.swing.JRadioButton();
+        nueved = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        dieza = new javax.swing.JRadioButton();
+        diezb = new javax.swing.JRadioButton();
+        diezc = new javax.swing.JRadioButton();
+        diezd = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        tema.setText("tema");
-
         asignatura.setText("Asignatura");
+
+        tema.setText("jLabel1");
+
+        acabarTest.setText("Acabar");
+
+        pregunta1.add(unoa);
+        unoa.setText("jRadioButton1");
+
+        jLabel1.setText("jLabel1");
+
+        pregunta1.add(unob);
+        unob.setText("jRadioButton2");
+
+        pregunta1.add(unoc);
+        unoc.setText("jRadioButton3");
+
+        pregunta1.add(unod);
+        unod.setText("jRadioButton4");
+
+        jLabel2.setText("jLabel1");
+
+        pregunta2.add(dosa);
+        dosa.setText("jRadioButton1");
+
+        pregunta2.add(dosb);
+        dosb.setText("jRadioButton2");
+
+        pregunta2.add(dosc);
+        dosc.setText("jRadioButton3");
+
+        pregunta2.add(dosd);
+        dosd.setText("jRadioButton4");
+
+        jLabel3.setText("jLabel1");
+
+        pregunta3.add(tresa);
+        tresa.setText("jRadioButton1");
+
+        pregunta3.add(tresb);
+        tresb.setText("jRadioButton2");
+
+        pregunta3.add(tresc);
+        tresc.setText("jRadioButton3");
+
+        pregunta3.add(tresd);
+        tresd.setText("jRadioButton4");
+
+        jLabel4.setText("jLabel1");
+
+        pregunta4.add(cuatroa);
+        cuatroa.setText("jRadioButton1");
+
+        pregunta4.add(cuatrob);
+        cuatrob.setText("jRadioButton2");
+
+        pregunta4.add(cuatroc);
+        cuatroc.setText("jRadioButton3");
+
+        pregunta4.add(cuatrod);
+        cuatrod.setText("jRadioButton4");
+
+        pregunta5.add(cincod);
+        cincod.setText("jRadioButton4");
+
+        pregunta5.add(cincoc);
+        cincoc.setText("jRadioButton3");
+
+        pregunta5.add(cincob);
+        cincob.setText("jRadioButton2");
+
+        pregunta5.add(cincoa);
+        cincoa.setText("jRadioButton1");
+
+        jLabel5.setText("jLabel1");
+
+        jLabel6.setText("jLabel1");
+
+        pregunta6.add(seisa);
+        seisa.setText("jRadioButton1");
+
+        pregunta6.add(seisb);
+        seisb.setText("jRadioButton2");
+
+        pregunta6.add(seisc);
+        seisc.setText("jRadioButton3");
+
+        pregunta6.add(seisd);
+        seisd.setText("jRadioButton4");
+
+        jLabel7.setText("jLabel1");
+
+        pregunta7.add(sietea);
+        sietea.setText("jRadioButton1");
+
+        pregunta7.add(sieteb);
+        sieteb.setText("jRadioButton2");
+
+        pregunta7.add(sietec);
+        sietec.setText("jRadioButton3");
+
+        pregunta7.add(sieted);
+        sieted.setText("jRadioButton4");
+
+        jLabel8.setText("jLabel1");
+
+        pregunta8.add(ochoa);
+        ochoa.setText("jRadioButton1");
+
+        pregunta8.add(ochob);
+        ochob.setText("jRadioButton2");
+
+        pregunta8.add(ochoc);
+        ochoc.setText("jRadioButton3");
+
+        pregunta8.add(ochod);
+        ochod.setText("jRadioButton4");
+
+        jLabel9.setText("jLabel1");
+
+        pregunta9.add(nuevea);
+        nuevea.setText("jRadioButton1");
+
+        pregunta9.add(nueveb);
+        nueveb.setText("jRadioButton2");
+
+        pregunta9.add(nuevec);
+        nuevec.setText("jRadioButton3");
+
+        pregunta9.add(nueved);
+        nueved.setText("jRadioButton4");
+
+        jLabel10.setText("jLabel1");
+
+        pregunta10.add(dieza);
+        dieza.setText("jRadioButton1");
+
+        pregunta10.add(diezb);
+        diezb.setText("jRadioButton2");
+
+        pregunta10.add(diezc);
+        diezc.setText("jRadioButton3");
+
+        pregunta10.add(diezd);
+        diezd.setText("jRadioButton4");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(unoa)
+                    .addComponent(jLabel1)
+                    .addComponent(unob)
+                    .addComponent(unoc)
+                    .addComponent(unod)
+                    .addComponent(dosa)
+                    .addComponent(jLabel2)
+                    .addComponent(dosb)
+                    .addComponent(dosc)
+                    .addComponent(dosd)
+                    .addComponent(tresa)
+                    .addComponent(jLabel3)
+                    .addComponent(tresb)
+                    .addComponent(tresc)
+                    .addComponent(tresd)
+                    .addComponent(cuatroa)
+                    .addComponent(jLabel4)
+                    .addComponent(cuatrob)
+                    .addComponent(cuatroc)
+                    .addComponent(cuatrod)
+                    .addComponent(cincoa)
+                    .addComponent(jLabel5)
+                    .addComponent(cincob)
+                    .addComponent(cincoc)
+                    .addComponent(cincod)
+                    .addComponent(seisa)
+                    .addComponent(jLabel6)
+                    .addComponent(seisb)
+                    .addComponent(seisc)
+                    .addComponent(seisd)
+                    .addComponent(sietea)
+                    .addComponent(jLabel7)
+                    .addComponent(sieteb)
+                    .addComponent(sietec)
+                    .addComponent(sieted)
+                    .addComponent(ochoa)
+                    .addComponent(jLabel8)
+                    .addComponent(ochob)
+                    .addComponent(ochoc)
+                    .addComponent(ochod)
+                    .addComponent(nuevea)
+                    .addComponent(jLabel9)
+                    .addComponent(nueveb)
+                    .addComponent(nuevec)
+                    .addComponent(nueved)
+                    .addComponent(dieza)
+                    .addComponent(jLabel10)
+                    .addComponent(diezb)
+                    .addComponent(diezc)
+                    .addComponent(diezd))
+                .addContainerGap(523, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(unoa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(unob)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(unoc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(unod)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dosa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dosb)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dosc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dosd)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tresa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tresb)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tresc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tresd)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cuatroa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cuatrob)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cuatroc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cuatrod)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cincoa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cincob)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cincoc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cincod)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(seisa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(seisb)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(seisc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(seisd)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sietea)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sieteb)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sietec)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sieted)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ochoa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ochob)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ochoc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ochod)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nuevea)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nueveb)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nuevec)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nueved)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dieza)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(diezb)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(diezc)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(diezd)
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        jScrollPane1.setViewportView(jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tema, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 535, Short.MAX_VALUE)
-                .addComponent(asignatura, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(tema, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(asignatura, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(acabarTest, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tema, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(asignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(asignatura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tema))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(acabarTest)
+                .addContainerGap())
         );
 
         pack();
@@ -95,7 +477,70 @@ public class Examen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel asignatura;
-    private javax.swing.JLabel tema;
+    public javax.swing.JButton acabarTest;
+    public javax.swing.JLabel asignatura;
+    public javax.swing.JRadioButton cincoa;
+    public javax.swing.JRadioButton cincob;
+    public javax.swing.JRadioButton cincoc;
+    public javax.swing.JRadioButton cincod;
+    public javax.swing.JRadioButton cuatroa;
+    public javax.swing.JRadioButton cuatrob;
+    public javax.swing.JRadioButton cuatroc;
+    public javax.swing.JRadioButton cuatrod;
+    public javax.swing.JRadioButton dieza;
+    public javax.swing.JRadioButton diezb;
+    public javax.swing.JRadioButton diezc;
+    public javax.swing.JRadioButton diezd;
+    public javax.swing.JRadioButton dosa;
+    public javax.swing.JRadioButton dosb;
+    public javax.swing.JRadioButton dosc;
+    public javax.swing.JRadioButton dosd;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel10;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabel6;
+    public javax.swing.JLabel jLabel7;
+    public javax.swing.JLabel jLabel8;
+    public javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JRadioButton nuevea;
+    public javax.swing.JRadioButton nueveb;
+    public javax.swing.JRadioButton nuevec;
+    public javax.swing.JRadioButton nueved;
+    public javax.swing.JRadioButton ochoa;
+    public javax.swing.JRadioButton ochob;
+    public javax.swing.JRadioButton ochoc;
+    public javax.swing.JRadioButton ochod;
+    public javax.swing.ButtonGroup pregunta1;
+    public javax.swing.ButtonGroup pregunta10;
+    public javax.swing.ButtonGroup pregunta2;
+    public javax.swing.ButtonGroup pregunta3;
+    public javax.swing.ButtonGroup pregunta4;
+    public javax.swing.ButtonGroup pregunta5;
+    public javax.swing.ButtonGroup pregunta6;
+    public javax.swing.ButtonGroup pregunta7;
+    public javax.swing.ButtonGroup pregunta8;
+    public javax.swing.ButtonGroup pregunta9;
+    public javax.swing.JRadioButton seisa;
+    public javax.swing.JRadioButton seisb;
+    public javax.swing.JRadioButton seisc;
+    public javax.swing.JRadioButton seisd;
+    public javax.swing.JRadioButton sietea;
+    public javax.swing.JRadioButton sieteb;
+    public javax.swing.JRadioButton sietec;
+    public javax.swing.JRadioButton sieted;
+    public javax.swing.JLabel tema;
+    public javax.swing.JRadioButton tresa;
+    public javax.swing.JRadioButton tresb;
+    public javax.swing.JRadioButton tresc;
+    public javax.swing.JRadioButton tresd;
+    public javax.swing.JRadioButton unoa;
+    public javax.swing.JRadioButton unob;
+    public javax.swing.JRadioButton unoc;
+    public javax.swing.JRadioButton unod;
     // End of variables declaration//GEN-END:variables
 }

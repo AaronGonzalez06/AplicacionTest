@@ -11,6 +11,8 @@ import vista.Inicio;
 import vista.Temas;
 import vista.CrearPregunta;
 import vista.PreCuestionario;
+import vista.Examen;
+import vista.Resultado;
 
 /**
  *
@@ -25,13 +27,15 @@ public class AplicacionCuestionario {
         // TODO code application logic here
         Inicio VistaInicio = new Inicio();
         Temas VistaTemas = new Temas();
+        Examen VistaExamen = new Examen();
+        Resultado VistaResultado = new Resultado();
         CrearPregunta VistaPregunta = new CrearPregunta();
         PreCuestionario VistaPreCuestionario = new PreCuestionario();
         
         
         ControladorBasico Basico = new ControladorBasico(VistaInicio,VistaTemas,VistaPreCuestionario);
         ControladorCrearPregunta crearPregunta =  new ControladorCrearPregunta(VistaInicio,VistaPregunta);
-        ControladorPreCuestionario Precuestionario = new ControladorPreCuestionario(VistaInicio,VistaPreCuestionario);
+        ControladorPreCuestionario Precuestionario = new ControladorPreCuestionario(VistaInicio,VistaPreCuestionario,VistaExamen,VistaResultado);
         Basico.iniciar();
         VistaInicio.setVisible(true);
     }

@@ -26,7 +26,7 @@ public class ConsultaRespuesta extends Conexion {
             int sumador = 0;
             ps = conexion.prepareStatement("select pre.pregunta , respuesta_uno, respuesta_dos ,respuesta_tres, respuesta_cuatro, respuesta_correcta"
                     + " from tema tem inner join respuesta res on res.id_nombreTema = tem.nombreTema "
-                    + "inner join pregunta pre on pre.id_pregunta = res.id_pregunta where tem.nombreTema = ?;");
+                    + "inner join pregunta pre on pre.id_pregunta = res.id_pregunta where tem.nombreTema = ? order by rand() limit 10;");
             ps.setString(1,tema);
             rs = ps.executeQuery();
             
@@ -75,7 +75,7 @@ public class ConsultaRespuesta extends Conexion {
             ps = conexion.prepareStatement("select count(*) as numeroPreguntas "
                     + "from tema tem inner join respuesta res on res.id_nombreTema = tem.nombreTema "
                     + "inner join pregunta pre on pre.id_pregunta = res.id_pregunta "
-                    + "where tem.nombreTema = ?;");
+                    + "where tem.nombreTema = ?");
             ps.setString(1,tema);
             rs = ps.executeQuery();
             
